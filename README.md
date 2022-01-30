@@ -21,11 +21,6 @@ Or using Yarn:
 yarn add @lnssh/webview
 ```
 
-Or using jsDelivr CDN:
-
-```html
-<script src="https://cdn.jsdelivr.net/npm/@lnssh/webview/dist/index.min.js" />
-```
 
 ### Guide
 
@@ -41,9 +36,9 @@ if (HWAWebView.isHwaEnv()) {
 
 **Need help?**
 
-- For a complete sample project, please refer to [examples](https://github.com/consenlabs/webview/tree/master/examples).
-- For any questions about the APIs, please open an [issue](https://github.com/consenlabs/webview/issues/new).
-- For any feature suggestions or for help, please open a [discussion](https://github.com/consenlabs/webview/discussions/new).
+- For a complete sample project, please refer to [examples](https://github.com/ln1778/webview/tree/master/examples).
+- For any questions about the APIs, please open an [issue](https://github.com/ln1778/webview/issues/new).
+- For any feature suggestions or for help, please open a [discussion](https://github.com/ln1778/webview/discussions/new).
 
 ### Documention
 
@@ -51,4 +46,4 @@ if (HWAWebView.isHwaEnv()) {
 
 ### License
 
-[MIT](https://github.com/consenlabs/webview/tree/master/LICENSE)
+[MIT](https://github.com/ln1778/webview/tree/master/LICENSE)
