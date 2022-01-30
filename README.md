@@ -42,7 +42,7 @@ if (HWAWebView.isHwaEnv()) {
 
 ### Documention
 
-- [Official API Documentation](https://imtoken.gitbook.io/developers/products/webview)
+- [Official API Documentation](http://doc.hchains.cn/hwatoken.html)
 
 ### License
 
