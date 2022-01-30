@@ -16,16 +16,16 @@ const App = () => {
   }, [])
 
   const setTitle = () => {
-    if (!state) return alert('not imToken env')
+    if (!state) return alert('not hwaToken env')
     HWAWebView.apis.navigator.setTitle(Math.random().toString(16).slice(2, 8))
   }
   const popup = () => {
-    if (!state) return alert('not imToken env')
+    if (!state) return alert('not hwaToken env')
     HWAWebView.apis.native.alert('hello')
   }
 
   const confirm = async () => {
-    if (!state) return alert('not imToken env')
+    if (!state) return alert('not hwaToken env')
     const result = await HWAWebView.apis.native.confirm({
       title: 'hello',
       cancelText: 'cancel',
@@ -39,7 +39,7 @@ const App = () => {
     <div className="container max-w-screen-md mx-auto flex flex-col justify-center items-center bg-white pt-5">
       <div className="p-6 mb-3 w-5/6 rounded bg-gray-100 row-auto shadow-md">
         <div className="flex text-sm text-gray-800 bg">
-          <span>In the imToken env: </span>
+          <span>In the hwaToken env: </span>
           <span className="text-red-400 pl-4">{state ? 'Yes' : 'No'}</span>
         </div>
       </div>
