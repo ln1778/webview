@@ -12,19 +12,19 @@ Package size about `1kb` (gzipped), no external dependences and no side effects.
 Using NPM:
 
 ```bash
-npm i @consenlabs-fe/webview
+npm i @lnssh/webview
 ```
 
 Or using Yarn:
 
 ```bash
-yarn add @consenlabs-fe/webview
+yarn add @lnssh/webview
 ```
 
 Or using jsDelivr CDN:
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/@consenlabs-fe/webview/dist/index.min.js" />
+<script src="https://cdn.jsdelivr.net/npm/@lnssh/webview/dist/index.min.js" />
 ```
 
 ### Guide
@@ -32,7 +32,7 @@ Or using jsDelivr CDN:
 It is recommended that you determine the current environment before using the APIs:
 
 ```jsx
-import HWAWebView from '@consenlabs-fe/webview'
+import HWAWebView from '@lnssh/webview'
 
 if (HWAWebView.isHwaEnv()) {
   HWAWebView.apis.navigator.setTitle('hello world')

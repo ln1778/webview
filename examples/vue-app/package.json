@@ -7,7 +7,7 @@
     "serve": "vite preview"
   },
   "dependencies": {
-    "@consenlabs-fe/webview": "latest",
+    "@lnssh/webview": "latest",
     "vue": "^3.0.5"
   },
   "devDependencies": {

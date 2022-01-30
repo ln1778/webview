@@ -7,7 +7,7 @@
     "serve": "vite preview"
   },
   "dependencies": {
-    "@consenlabs-fe/webview": "latest",
+    "@lnssh/webview": "latest",
     "react": "^17.0.0",
     "react-dom": "^17.0.0"
   },

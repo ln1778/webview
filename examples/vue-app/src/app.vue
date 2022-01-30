@@ -37,7 +37,7 @@
 
 <script lang="ts">
 import { ref, defineComponent } from 'vue'
-import HWAWebView from '@consenlabs-fe/webview'
+import HWAWebView from '@lnssh/webview'
 
 export default defineComponent({
   name: 'App',
