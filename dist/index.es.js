@@ -220,6 +220,30 @@ const user = {
     },
 };
 
+const transaction = {
+    /**
+     * Show switchable user wallets. If the switch is successful, the new address will be returned.
+     */
+    sendSignTransaction: (tx = null) => {
+        return new Promise((resolve, reject) => {
+            callAPI('transaction.sendSignTransaction', Object.assign({}, tx), (err, address) => {
+                if (err)
+                    return reject(err);
+                resolve(address);
+            });
+        });
+    },
+    signTransaction: (tx = null) => {
+        return new Promise((resolve, reject) => {
+            callAPI('transaction.signTransaction', Object.assign({}, tx), (err, address) => {
+                if (err)
+                    return reject(err);
+                resolve(address);
+            });
+        });
+    },
+};
+
 const user$1 = {
     /**
      * Get the current language environment, e.g. "en-us".
@@ -344,6 +368,7 @@ const apis = {
     device: user$1,
     internal,
     layout,
+    transaction
 };
 
 const isHwaEnv = () => isHWAWebView();

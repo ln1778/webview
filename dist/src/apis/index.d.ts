@@ -20,7 +20,7 @@ declare const apis: {
         setClipboard: (text: string) => void;
     };
     user: {
-        showAccountSwitch: (chainType?: "ETHEREUM" | "TRON" | "HWAN COIN" | null) => Promise<string>;
+        showAccountSwitch: (chainType?: import("./user").ChainType | null) => Promise<string>;
     };
     device: {
         getCurrentLanguage: () => Promise<string>;
@@ -36,6 +36,10 @@ declare const apis: {
     };
     layout: {
         setOptions: (options: import("./layout").WebViewLayoutOptions) => void;
+    };
+    transaction: {
+        sendSignTransaction: (tx?: import("./transaction").TxType | null) => Promise<string>;
+        signTransaction: (tx?: import("./transaction").TxType | null) => Promise<string>;
     };
 };
 export default apis;

@@ -4,13 +4,19 @@ import HWAWebView from '@lnssh/webview'
 const App = () => {
   const [state, setState] = useState<boolean>(false)
   const [version, setVersion] = useState<string>('')
+  const [currentCurrency, setCurrentCurrency] = useState<string>('$')
   useEffect(() => {
-    const isHwa = HWAWebView.isHwaEnv()
-    setState(isHwa)
+    const isHwa = HWAWebView.isHwaEnv();
+    setState(isHwa);
     if (isHwa) {
-      setVersion(HWAWebView.getVersion())
-      HWAWebView.apis.device.getCurrentCurrency().then(res => {
-        console.log(res)
+     let version=HWAWebView.getVersion();
+      setVersion(version)
+      
+      // HWAWebView.apis.device.getCurrentCurrency().then(res => {
+      //   setCurrentCurrency(res);
+      // });
+      HWAWebView.apis.transaction.sendSignTransaction({to:"0Xdsfdfdfsfd",value:222}).then(res => {
+        alert(res);
       })
     }
   }, [])
@@ -43,6 +49,13 @@ const App = () => {
           <span className="text-red-400 pl-4">{state ? 'Yes' : 'No'}</span>
         </div>
       </div>
+      <div className="p-6 mb-3 w-5/6 rounded bg-gray-100 row-auto shadow-md">
+        <div className="flex text-sm text-gray-800 bg">
+          <span>Current Currency: </span>
+          <span className="text-red-400 pl-4">{currentCurrency}</span>
+        </div>
+      </div>
+      
       <div className="p-6 mb-3 w-5/6 rounded bg-gray-100 row-auto shadow-md">
         <div className="flex text-sm text-gray-800 bg">
           <span>Current version: </span>

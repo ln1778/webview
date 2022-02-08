@@ -34,7 +34,7 @@ declare const HWAWebView: {
             setClipboard: (text: string) => void;
         };
         user: {
-            showAccountSwitch: (chainType?: "ETHEREUM" | "TRON" | "HWAN COIN" | null) => Promise<string>;
+            showAccountSwitch: (chainType?: import("./apis/user").ChainType | null) => Promise<string>;
         };
         device: {
             getCurrentLanguage: () => Promise<string>;
@@ -50,6 +50,10 @@ declare const HWAWebView: {
         };
         layout: {
             setOptions: (options: import("./apis/layout").WebViewLayoutOptions) => void;
+        };
+        transaction: {
+            sendSignTransaction: (tx?: import("./apis/transaction").TxType | null) => Promise<string>;
+            signTransaction: (tx?: import("./apis/transaction").TxType | null) => Promise<string>;
         };
     };
 };
